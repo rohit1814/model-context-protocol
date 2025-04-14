@@ -26,14 +26,16 @@ This project provides a terminal server implementation (`terminal_server.py`) un
    .\venv\Scripts\activate
 
 2. **Add to MCP server to Claude Desktop**
-{
-  "mcpServers": {
-    "terminal": {
-      "command": "C:\\Users\\<Your-Username>\\.local\\bin\\uv.exe",
-      "args": [
-        "--directory", "D:\\Banavo\\mcp\\mcp_test\\servers\\terminal_server",
-        "run", "terminal_server.py"
-      ]
+    ```json
+    {
+        "mcpServers": {
+            "terminal": {
+            "command": "C:\\Users\\<Your-Username>\\.local\\bin\\uv.exe",
+            "args": [
+                "--directory", "D:\\Banavo\\mcp\\mcp_test\\servers\\terminal_server",
+                "run", "terminal_server.py"
+            ]
+            }
+        }
     }
-  }
-}
+    
