@@ -15,7 +15,7 @@ This project provides a terminal server implementation (`terminal_server.py`) un
 
    ```bash
    git clone <repository-url>
-   cd mcp_test
+   cd mcp_with_docker
 
    curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -38,4 +38,11 @@ This project provides a terminal server implementation (`terminal_server.py`) un
             }
         }
     }
-    
+
+3. **Add the Dockerfile with all the configuration**
+    ```bash
+    1. cd servers/terminal_server/
+
+    2. docker build -t terminal_server_docker .
+
+
