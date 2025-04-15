@@ -2,14 +2,14 @@ import os
 import subprocess
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("terminal")
+mcp = FastMCP("terminal_docker")
 
 # Use environment variable for root directory, defaulting to /app
 ROOT_DIR = os.environ.get("ROOT_DIR", "/app")
 CURRENT_WORKING_DIR = os.getcwd()
 print(f"Present Working Directory: {CURRENT_WORKING_DIR}\n")
 
-DEFAULT_WORKSPACE = os.path.join(ROOT_DIR, "mcp_test", "workspace")
+DEFAULT_WORKSPACE = os.path.join(ROOT_DIR, "workspace")
 print(f"Default workspace: {DEFAULT_WORKSPACE}\n")
 
 # Ensure workspace directory exists

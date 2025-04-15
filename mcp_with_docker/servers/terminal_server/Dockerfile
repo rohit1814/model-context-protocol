@@ -26,7 +26,7 @@ RUN uv sync --frozen --no-cache
 COPY . /app
 
 # Expose the desired port
-EXPOSE 5000
+# EXPOSE 5000
 
 # Run the server using uv
 CMD [ "uv", "run", "terminal_server.py" ]

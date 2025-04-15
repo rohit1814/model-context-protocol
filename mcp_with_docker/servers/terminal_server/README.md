@@ -29,11 +29,16 @@ This project provides a terminal server implementation (`terminal_server.py`) un
     ```json
     {
         "mcpServers": {
-            "terminal": {
-            "command": "C:\\Users\\<Your-Username>\\.local\\bin\\uv.exe",
-            "args": [
-                "--directory", "D:\\Banavo\\mcp\\mcp_test\\servers\\terminal_server",
-                "run", "terminal_server.py"
+            "terminal_docker":{
+            "command": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+            "args":[
+                "run",
+                "-i",
+                "--rm",
+                "--init",
+                "-e", "DOCKER_CONTAINER=true",
+                "-v", "D:/Banavo/mcp/model-context-protocol/mcp_with_docker/workspace:/app/workspace",
+                "mcp_with_docker:latest"
             ]
             }
         }
@@ -44,5 +49,7 @@ This project provides a terminal server implementation (`terminal_server.py`) un
     1. cd servers/terminal_server/
 
     2. docker build -t terminal_server_docker .
+
+4. Open the Claude and check if it's working. If not check the MCP logs.
 
 
